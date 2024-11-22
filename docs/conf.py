@@ -1,3 +1,4 @@
-import os
+project = "mechAInistic"
+show_authors = True
 
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "/")
+html_title = "mechAInistic documentation"
