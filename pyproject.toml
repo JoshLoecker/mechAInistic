@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mechainistic"
+version = "0.0.1"
+description = "Interpret and analyze mechanistic models using large language models"
+authors = [
+    {name = "Josh Loecker", email = "joshloecker@icloud.com"}
+]
+requires-python = ">=3.13"
+keywords = ["mechanistic model", "modeling", "llm agent"]
+readme = "README.md"
+dependencies = [
+    "asyncpg>=0.30.0",
+]
+
+[project.urls]
+Repository = "https://github.com/JoshLoecker/mechAInistic"
+Documentation = "https://j"
+
+[tool.ruff]
+cache-dir = "~/.cache/ruff"
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
