@@ -14,6 +14,7 @@ keywords = ["mechanistic model", "modeling", "llm agent"]
 readme = "README.md"
 dependencies = [
     "asyncpg>=0.30.0",
+    "loguru>=0.7.2",
 ]
 
 [project.urls]
@@ -23,6 +24,8 @@ Documentation = "https://j"
 [tool.ruff]
 cache-dir = "~/.cache/ruff"
 line-length = 120
+extend-include = ["docs/*.py", "tests/*.py"]
 
 [tool.ruff.format]
 quote-style = "double"
+docstring-code-format = true
