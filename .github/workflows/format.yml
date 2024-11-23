@@ -1,5 +1,7 @@
 name: Format
-on: [pull_request]
+on:
+  pull_request:
+  workflow_dispatch:
 
 env:
   UV_SYSTEM_PYTHON: 0
