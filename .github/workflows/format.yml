@@ -1,5 +1,6 @@
 name: Format
-on: [pull_request]
+on:
+  pull_request:
 
 env:
   UV_SYSTEM_PYTHON: 0
