@@ -6,20 +6,45 @@ build-backend = "setuptools.build_meta"
 name = "mechainistic"
 version = "0.0.1"
 description = "Interpret and analyze mechanistic models using large language models"
-authors = [
-    {name = "Josh Loecker", email = "joshloecker@icloud.com"}
-]
+authors = [{name = "Josh Loecker", email = "joshloecker@icloud.com"}]
 requires-python = ">=3.13"
-keywords = ["mechanistic model", "modeling", "llm agent"]
 readme = "README.md"
 dependencies = [
     "asyncpg>=0.30.0",
     "loguru>=0.7.2",
 ]
+keywords = [
+    "Immunology", "Immune System", "Informed Decision Making", "IDT", "Immune Digital Twin",
+    "Bioinformatics", "Computational Biology", "Disease Modeling", "Biological Systems",
+    "Metabolic Modeling", "Signaling Modeling", "Signaling Activities", "Metabolic Fluxes",
+    "Drug Discovery", "Mechanistic Exploration", "Hypothesis Generation",
+    "LLM", "Large Language Model", "RAG", "Retrieval Augmented Generation",
+    "Simulation", "Analysis", "Perturbation", "Optimization", "AI Agent", "LLM Agent"
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Development Status :: 2 - Pre-Alpha",
+
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Human Machine Interfaces",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+]
 
 [project.urls]
-Repository = "https://github.com/JoshLoecker/mechAInistic"
-Documentation = "https://j"
+homepage = "https://github.com/JoshLoecker/mechAInistic"
+documentation = "https://mechainistic.readthedocs.io"
+source = "https://github.com/JoshLoecker/mechAInistic"
+issues = "https://github.com/JoshLoecker/mechAInistic/issues"
 
 [tool.ruff]
 cache-dir = "~/.cache/ruff"
