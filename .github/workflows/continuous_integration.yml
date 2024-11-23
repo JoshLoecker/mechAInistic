@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  UV_SYSTEM_PYTHON: 0
+  UV_SYSTEM_PYTHON: 1
 
 jobs:
   format:
