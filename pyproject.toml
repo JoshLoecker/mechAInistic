@@ -7,7 +7,7 @@ name = "mechainistic"
 version = "0.0.1"
 description = "Interpret and analyze mechanistic models using large language models"
 authors = [{name = "Josh Loecker", email = "joshloecker@icloud.com"}]
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 readme = "README.md"
 dependencies = [
     "asyncpg>=0.30.0",
