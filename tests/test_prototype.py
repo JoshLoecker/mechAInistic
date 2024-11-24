@@ -4,4 +4,3 @@ def test_none():
     This is a dummy test to make sure the `continuous_integration` `test` job works properly
     """
     assert 1 == 1
-    return True

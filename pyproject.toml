@@ -56,6 +56,15 @@ documentation = "https://mechainistic.readthedocs.io"
 source = "https://github.com/JoshLoecker/mechAInistic"
 issues = "https://github.com/JoshLoecker/mechAInistic/issues"
 
+[dependency-groups]
+dev = [
+    "hypothesis>=6.119.4",
+    "loguru>=0.7.2",
+    "pytest>=8.3.3",
+    "pytest-cov>=6.0.0",
+    "ruff>=0.8.0",
+]
+
 [tool.setuptools_scm]
 write_to = "src/mechainistic/__init__.py"
 local_scheme = "no-local-version"
@@ -104,12 +113,4 @@ ignore = [
     "S101",     # allow use of `assert` in test files
 ]
 
-[dependency-groups]
-dev = [
-    "hypothesis>=6.119.4",
-    "loguru>=0.7.2",
-    "pre-commit>=4.0.1",
-    "pytest>=8.3.3",
-    "pytest-cov>=6.0.0",
-    "ruff>=0.8.0",
-]
+[tool.coverage]
