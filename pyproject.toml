@@ -99,6 +99,11 @@ ignore = [
     "D100",     # allow undocumented public module definitions
 ]
 
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S101",     # allow use of `assert` in test files
+]
+
 [dependency-groups]
 dev = [
     "hypothesis>=6.119.4",
