@@ -63,6 +63,7 @@ local_scheme = "no-local-version"
 [tool.ruff]
 line-length = 120
 extend-include = ["docs/**/*.py", "tests/**/*.py"]
+exclude = ["__init__.py"]
 
 [tool.ruff.format]
 quote-style = "double"
