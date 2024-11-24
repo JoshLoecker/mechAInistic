@@ -25,7 +25,7 @@ uv run --python 3.13 pytest --cov=tests/ --cov-report term-missing
 ```
 
 ## Code Formatting and Linting
-This project uses `ruff` for code formatting and linting. To check the code format and linting, run:
+This project uses [ruff](https://docs.astral.sh/ruff) for code formatting and linting. It is highly recommended to [integrate it with your IDE](https://docs.astral.sh/ruff/editors). To check the code format and linting manually, run:
 ```sh
 uv run --python 3.13 ruff format --check --verbose
 uv run --python 3.13 ruff check --no-fix --verbose

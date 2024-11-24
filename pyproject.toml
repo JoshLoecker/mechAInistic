@@ -1,17 +1,20 @@
 [build-system]
-requires = ["setuptools>=75"]
+requires = ["setuptools>=75", "setuptools-scm[toml]>=8.1.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mechainistic"
-version = "0.0.1"
+dynamic = ["version"]
 description = "Interpret and analyze mechanistic models using large language models"
 authors = [{name = "Josh Loecker", email = "joshloecker@icloud.com"}]
-requires-python = ">=3.9"
+requires-python = ">=3.9,<4.0"
 readme = "README.md"
 dependencies = [
     "asyncpg>=0.30.0",
+    "httpx>=0.27.2",
     "loguru>=0.7.2",
+    "pydantic-settings>=2.6.1",
+    "pydantic>=2.10.1",
 ]
 keywords = [
     "Immunology", "Immune System", "Informed Decision Making", "IDT", "Immune Digital Twin",
@@ -23,7 +26,14 @@ keywords = [
 ]
 classifiers = [
     "Development Status :: 1 - Planning",
-    "Development Status :: 2 - Pre-Alpha",
+
+    # Modify development status as-needed
+    # "Development Status :: 2 - Pre-Alpha",
+    # "Development Status :: 3 - Alpha",
+    # "Development Status :: 4 - Beta",
+    # "Development Status :: 5 - Production/Stable",
+    # "Development Status :: 6 - Mature",
+    # "Development Status :: 7 - Inactive",
 
     "Intended Audience :: Developers",
     "Intended Audience :: End Users/Desktop",
@@ -46,18 +56,54 @@ documentation = "https://mechainistic.readthedocs.io"
 source = "https://github.com/JoshLoecker/mechAInistic"
 issues = "https://github.com/JoshLoecker/mechAInistic/issues"
 
+[tool.setuptools_scm]
+write_to = "src/mechainistic/__init__.py"
+local_scheme = "no-local-version"
+
 [tool.ruff]
-cache-dir = "~/.cache/ruff"
 line-length = 120
-extend-include = ["docs/*.py", "tests/*.py"]
+extend-include = ["docs/**/*.py", "tests/**/*.py"]
 
 [tool.ruff.format]
 quote-style = "double"
 docstring-code-format = true
 
+[tool.ruff.lint]
+# Linting rules: https://docs.astral.sh/ruff/rules/
+select = [
+    "A",        # do not use python builtins for variables or parameters; https://pypi.org/project/flake8-builtins/
+    "ASYNC",    # identify asynchronous-related problems; https://pypi.org/project/flake8-async/
+    "B",        # find likely bugs and design problems; https://pypi.org/project/flake8-bugbear/
+    "C4",       # create better list, set, & dict comprehensions; https://pypi.org/project/flake8-comprehensions/
+    "C90",      # check for complexity; https://pypi.org/project/mccabe/
+    "D",        # docstring style checker; https://pypi.org/project/pydocstyle/
+    "DOC",      # docstring linter; https://pypi.org/project/pydoclint/
+    "E",        # style guide checking; https://pypi.org/project/pycodestyle/
+    "F",        # check for errors; https://pypi.org/project/pyflakes/
+    "RUF",      # ruff-specific linting rules; https://docs.astral.sh/ruff/rules/#ruff-specific-rules-ruf
+    "FA",       # use from __future__ import annotations if needed; https://pypi.org/project/flake8-future-annotations/
+    "FURB",     # refurbish and modernize Python codebases; https://pypi.org/project/refurb/
+    "I",        # sorting imports rules; https://pypi.org/project/isort/
+    "N",        # check naming conventions; https://pypi.org/project/pep8-naming/
+    "PERF",     # check performance anti-patterns; https://pypi.org/project/perflint/
+    "PT",       # check common style issues or inconsistencies in pytest; https://pypi.org/project/flake8-pytest-style/
+    "PTH",      # use pathlib where possible; https://pypi.org/project/flake8-use-pathlib/
+    "S",        # security testing; https://pypi.org/project/flake8-bandit/
+    "SIM",      # check for code that can be simplified; https://pypi.org/project/flake8_simplify/
+    "T20",      # do not use prints in production; https://pypi.org/project/flake8-print/
+    "TRY",      # prevent Exception handling anti-patterns; https://pypi.org/project/tryceratops/
+    "UP"        # upgrade syntax for newer versions; https://pypi.org/project/pyupgrade
+]
+ignore = [
+    "D100",     # allow undocumented public module definitions
+]
+
 [dependency-groups]
 dev = [
+    "hypothesis>=6.119.4",
+    "loguru>=0.7.2",
     "pre-commit>=4.0.1",
     "pytest>=8.3.3",
     "pytest-cov>=6.0.0",
+    "ruff>=0.8.0",
 ]
