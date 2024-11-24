@@ -21,7 +21,7 @@ Ensure you have the following installed on your system:
 ## Running Tests
 To run the tests, use:
 ```sh
-uv run --python 3.13 pytest --cov=tests/ --cov-report term-missing
+pytest --cov=tests/ --cov-report term-missing:skip-covered
 ```
 
 ## Code Formatting and Linting
