@@ -6,9 +6,6 @@ on:
   pull_request:
   workflow_dispatch:
 
-env:
-  UV_SYSTEM_PYTHON: 1
-
 jobs:
   format:
     runs-on: ubuntu-latest
