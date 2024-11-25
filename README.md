@@ -1,12 +1,14 @@
-# Development Getting Started
-## Prerequisites
+# mech(AI)nistic
+
+## Development Getting Started
+### Prerequisites
 Ensure you have the following installed on your system:
 - (Optional) [`uv`](https://docs.astral.sh/uv/)
 - Python 3.9+ (preferably Python 3.13)
 
 `uv python install 3.13` can be used to install Python 3.13 independently of the system Python version.
 
-## Installation
+### Installation
 1. **Clone the repository:**
     ```sh
     git clone https://github.com/JoshLoecker/mechAInistic.git
@@ -18,29 +20,29 @@ Ensure you have the following installed on your system:
     uv sync --python 3.13 --all-extras --dev
     ```
 
-## Running Tests
+### Running Tests
 To run the tests, use:
 ```sh
 pytest --cov=tests/ --cov-report term-missing:skip-covered
 ```
 
-## Code Formatting and Linting
+### Code Formatting and Linting
 This project uses [ruff](https://docs.astral.sh/ruff) for code formatting and linting. It is highly recommended to [integrate it with your IDE](https://docs.astral.sh/ruff/editors). To check the code format and linting manually, run:
 ```sh
 uv run --python 3.13 ruff format --check --verbose
 uv run --python 3.13 ruff check --no-fix --verbose
 ```
 
-## Continuous Integration
+### Continuous Integration
 The project uses GitHub Actions for continuous integration. The configuration is located in `.github/workflows/continuous_integration.yml`.
 
-## Pre-commit Hooks
+### Pre-commit Hooks
 This project uses [pre-commit](https://pre-commit.com/) hooks to ensure code quality. To set up pre-commit hooks, run:
 ```sh
 pre-commit install
 ```
 
-## Contributing
+### Contributing
 
 We welcome contributions from the community! To contribute, follow these steps:
 
